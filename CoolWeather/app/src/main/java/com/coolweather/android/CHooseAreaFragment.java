@@ -128,7 +128,7 @@ public class CHooseAreaFragment extends Fragment {
             currentLevel=LEVEL_CITY;
         }else {
             int provinceCode=selectedProvince.getProvinceCode();
-            String address="http://guolin.tech/api/china"+provinceCode;//网络 url  可更换需要的信息
+            String address="http://guolin.tech/api/china/"+provinceCode;//网络 url  可更换需要的信息
             queryFromServer(address,"city");
         }
     }
@@ -150,7 +150,7 @@ public class CHooseAreaFragment extends Fragment {
     }else {
         int provinceCode=selectedProvince.getProvinceCode();
         int cityCode=selectedCity.getCityCode();
-        String address="http://guolin.tech/api/china"+provinceCode
+        String address="http://guolin.tech/api/china/"+provinceCode
                 +"/"+cityCode;       //网络 url  可更换
         queryFromServer(address,"county");
 
